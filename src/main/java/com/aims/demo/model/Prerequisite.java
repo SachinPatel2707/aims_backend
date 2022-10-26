@@ -11,6 +11,15 @@ public class Prerequisite {
     Integer id;
     String courseCode;
     String prerequisiteCode;
+    Float minCgpa;
+
+    public Float getMinCgpa() {
+        return minCgpa;
+    }
+
+    public void setMinCgpa(Float minCgpa) {
+        this.minCgpa = minCgpa;
+    }
 
     public Integer getId() {
         return id;

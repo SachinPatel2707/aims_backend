@@ -3,6 +3,7 @@ package com.aims.demo.controller;
 import com.aims.demo.model.Course;
 import com.aims.demo.repository.CatalogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,5 +25,17 @@ public class CatalogController {
     List<Course> getCourse(@RequestBody Course course)
     {
         return catalog.findByCode(course.getCode());
+    }
+
+    @GetMapping("/getAllCourses")
+    List<Course> getAllCourses()
+    {
+        return catalog.findAll();
+    }
+
+    @PostMapping("/setOfferedBy")
+    void setOfferedBy(@RequestBody Course course)
+    {
+        catalog.setOfferedBy(course.getCode(), course.getOfferedBy());
     }
 }

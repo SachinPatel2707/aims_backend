@@ -12,6 +12,15 @@ public class Course {
     Integer l;
     Integer t;
     Integer p;
+    String offeredBy;
+
+    public String getOfferedBy() {
+        return offeredBy;
+    }
+
+    public void setOfferedBy(String offeredBy) {
+        this.offeredBy = offeredBy;
+    }
 
     public String getCode() {
         return code;
