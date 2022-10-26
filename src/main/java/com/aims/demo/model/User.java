@@ -15,6 +15,42 @@ public class User {
     private String lastName;
     private Integer category;
     private String password;
+    private String yearOfEnrollment;
+    private String Department;
+    private Float cgpa;
+    private Integer totalCreditsEarned;
+
+    public String getYearOfEnrollment() {
+        return yearOfEnrollment;
+    }
+
+    public void setYearOfEnrollment(String yearOfEnrollment) {
+        this.yearOfEnrollment = yearOfEnrollment;
+    }
+
+    public String getDepartment() {
+        return Department;
+    }
+
+    public void setDepartment(String department) {
+        Department = department;
+    }
+
+    public Float getCgpa() {
+        return cgpa;
+    }
+
+    public void setCgpa(Float cgpa) {
+        this.cgpa = cgpa;
+    }
+
+    public Integer getTotalCreditsEarned() {
+        return totalCreditsEarned;
+    }
+
+    public void setTotalCreditsEarned(Integer totalCreditsEarned) {
+        this.totalCreditsEarned = totalCreditsEarned;
+    }
 
     public String getPassword() {
         return password;

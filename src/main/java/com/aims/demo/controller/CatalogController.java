@@ -33,6 +33,12 @@ public class CatalogController {
         return catalog.findAll();
     }
 
+    @GetMapping("/getCurrentSemCourses")
+    List<Course> getCurSemCourses()
+    {
+        return catalog.findCurSemCourses();
+    }
+
     @PostMapping("/setOfferedBy")
     void setOfferedBy(@RequestBody Course course)
     {

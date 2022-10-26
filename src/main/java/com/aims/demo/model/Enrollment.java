@@ -1,30 +1,27 @@
 package com.aims.demo.model;
 
-import org.springframework.stereotype.Repository;
-
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Repository
-public class Enrollement {
+@Entity
+public class Enrollment {
     @Id
     @GeneratedValue
     Integer id;
     String sId;
     String courseCode;
     Integer semester;
-    String grade;
-    Integer percentage;
+    Float grade;
 
-    public Enrollement() {}
+    public Enrollment() {}
 
-    public Enrollement(Integer id, String sId, String courseCode, Integer semester, String grade, Integer percentage) {
+    public Enrollment(Integer id, String sId, String courseCode, Integer semester, Float grade) {
         this.id = id;
         this.sId = sId;
         this.courseCode = courseCode;
         this.semester = semester;
         this.grade = grade;
-        this.percentage = percentage;
     }
 
     public Integer getId() {
@@ -59,19 +56,11 @@ public class Enrollement {
         this.semester = semester;
     }
 
-    public String getGrade() {
+    public Float getGrade() {
         return grade;
     }
 
-    public void setGrade(String grade) {
+    public void setGrade(Float grade) {
         this.grade = grade;
-    }
-
-    public Integer getPercentage() {
-        return percentage;
-    }
-
-    public void setPercentage(Integer percentage) {
-        this.percentage = percentage;
     }
 }

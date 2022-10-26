@@ -17,4 +17,7 @@ public interface CatalogRepository extends JpaRepository<Course, String> {
     @Modifying
     @Query("Update Course c Set c.offeredBy = :user Where c.code = :code")
     void setOfferedBy(@Param("code") String code, @Param("user") String user);
+
+    @Query("Select c from Course c where c.offeredBy is not null")
+    List<Course> findCurSemCourses();
 }
